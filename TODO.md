@@ -4,14 +4,15 @@ Finished things will still be here until next TODO update.
 
 ## WIP
 - [x] Migrate blog contents to repo `blog`
-- [ ] Fix page style on mobile browsers (by re-designing page load indicator)
-- [ ] Use Gitment as comment system
+- [x] Fix page style on mobile browsers (by re-designing page load indicator)
+- [x] Use Gitment as comment system
+- [x] Re-design site theme
 - [ ] `README_zh-CN.md` - Same document in Chinese
 - [ ] README for `.io` repo
 
 ## Features
-- [ ] Fix ident bug in `<pre>` (should be in CSS)
-- [ ] Anchors (like `#posts/2019/article.md#top`)
+- [x] Fix ident bug in `<pre>` (should be in CSS)
+- [ ] Anchors (like `#posts/2019/article.md#top`) (`view-source:https://marked.js.org/`)
 - [ ] Some GFM support (?)
   - Tables, `<del>`s, emojis
 
