@@ -3,10 +3,11 @@
 Finished things will still be here until next TODO update.
 
 ## WIP
-- [ ] Migrate blog contents to repo `blog`
+- [x] Migrate blog contents to repo `blog`
 - [ ] Fix page style on mobile browsers (by re-designing page load indicator)
 - [ ] Use Gitment as comment system
 - [ ] `README_zh-CN.md` - Same document in Chinese
+- [ ] README for `.io` repo
 
 ## Features
 - [ ] Fix ident bug in `<pre>` (should be in CSS)
