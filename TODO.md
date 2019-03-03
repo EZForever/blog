@@ -13,7 +13,12 @@ Finished things will still be here until next TODO update.
 ## Features
 - [x] Fix ident bug in `<pre>` (should be in CSS)
 - [x] Anchors (like `#posts/2019/article.md#top`) (`view-source:https://marked.js.org/`)
-- [ ] Some GFM support (?)
+- [x] Some GFM support (?)
   - Tables, `<del>`s, emojis
+- [ ] `^Hello^` == <sup>Hello</sup>, etc
+- [ ] Plugins (like `[[module collapse]]` + `[[collapse]]xxx[[/collapse]]`)
 
 ## Pages & posts
+- [ ] Necessary pages
+- [ ] `/posts/default.md`
+
