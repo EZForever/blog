@@ -1,5 +1,5 @@
 # ezforever.github.io
-[Main Page (If visiting from *.io)](#)  
+[Main Page (If visiting from *.io)](#/)  
 My tiny & shabby blog site.
 
 ## Messages to visitors

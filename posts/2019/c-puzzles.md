@@ -1,5 +1,5 @@
 # [翻译] C Puzzles - 一些有趣的C语言问题
-[主页](#)
+[主页](#/)
 
 大部分内容来自[这里](http://www.gowrikumar.com/c/index.php)，作者为Gowri Kumar，以CC BY-SA 3.0协议发布。除了翻译之外，本文对问题进行了重新整理，删除了一些过老无法复现的问题并增加了其它几个有趣的问题。
 
@@ -371,4 +371,4 @@ int main() {
 ```
 
 ---
-[第21-49题](#posts/2019/c-puzzles-2.md)
+[第21-49题](#/posts/2019/c-puzzles-2.md)

@@ -1,5 +1,5 @@
 # TODO
-[Main Page (If visiting from *.io)](#)  
+[Main Page (If visiting from *.io)](#/)  
 Finished things will still be here until next TODO update.
 
 ## WIP
@@ -12,7 +12,7 @@ Finished things will still be here until next TODO update.
 
 ## Features
 - [x] Fix ident bug in `<pre>` (should be in CSS)
-- [ ] Anchors (like `#posts/2019/article.md#top`) (`view-source:https://marked.js.org/`)
+- [x] Anchors (like `#posts/2019/article.md#top`) (`view-source:https://marked.js.org/`)
 - [ ] Some GFM support (?)
   - Tables, `<del>`s, emojis
 
