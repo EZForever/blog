@@ -73,7 +73,7 @@ int main() {
   int *p;
   p = malloc(sizeof(int));
   *p = 10;
-  y = y/*p; /*dividing y by *p */;
+  y = y/*p; /* dividing y by *p */;
   PrintInt(y);
   return 0;
 }
@@ -140,8 +140,8 @@ int main() {
 #include <stdio.h>
 
 int main() {
-  int i;
-  for(i = 0; i < 20; i--)
+  int i, n = 20;
+  for(i = 0; i < n; i--)
     putchar('-');
   return 0;
 }
@@ -184,7 +184,7 @@ int main() {
 
 int main() {
   int i = 6;
-  if(((++i < 7) && ( i++ / 6)) || (++i <= 9));
+  if(((++i < 7) && (i++ / 6)) || (++i <= 9));
   printf("%d\n", i);
   return 0;
 }
@@ -238,7 +238,7 @@ int main() {
 ```
 
 ---
-**34** 以下是一个多次使用的偏移（offset）宏。弄清楚它想要做什么以及使用它的优势是什么。
+**34** 以下是一个被广泛使用的偏移量（offset）计算宏。弄清楚它想要做什么以及使用它的优势是什么。
 ```C
 #define offsetof(a,b) ((int)(&(((a*)(0))->b)))
 ```
@@ -284,7 +284,7 @@ if(isupper(c++)) {
   //...
 }
 ```
-大多数C语言库中的`isupper()`函数也是用宏实现的（在`ctypes.h`中），但是没有任何副作用。看看你的系统中`isupper()`是怎么实现的。
+大多数C语言库中的`isupper()`函数也是用宏实现的（在`ctype.h`中），但是没有任何副作用。看看你的系统中`isupper()`是怎么实现的。
 
 ---
 **40** 我希望你知道函数参数表中省略号（`...`）用于说明函数接受不定参数。（`printf()`的原型是什么？）那么这个定义有什么问题？
