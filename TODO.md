@@ -1,9 +1,12 @@
 # TODO
-[Main Page (If visiting from *.io)](#/)  
-Finished things will still be here until next TODO update.
+[主页（如果是从网站访问）](#/)  
+已经完成的项目会在下一次更新被移除。
 
-## Pages & posts
-- [ ] Necessary pages
-  - `default.md` in Chinese
-- [ ] `/posts/default.md`
+## 文章
+- *暂无*
+
+## 固定页面
+- [ ] 必要的页面们
+  - `/pages/profile.md`
+  - `/pages/donate.md`
 
