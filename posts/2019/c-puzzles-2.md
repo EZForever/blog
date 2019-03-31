@@ -127,9 +127,9 @@ int max(int a, int b) {
 
 int main() {
   int a = 10, b = 20;
-  PrintInt(FiveTimes(a));
-  PrintInt(FiveTimes(b));
-  PrintInt(FiveTimes(max(a, b)));
+  PrintInt(a);
+  PrintInt(b);
+  PrintInt(max(a, b));
   return 0;
 }
 ```
