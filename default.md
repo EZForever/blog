@@ -1,10 +1,16 @@
 # 十万个不为什么
-*100,000 'why not's*
+*A hundred thousand 'why not's*
 
-## [文章归档](#/posts/)
+---
 
-## 固定页面
-- [人事档案](#/pages/profile.md) - *Coming soon*
-- [TODO](#/TODO.md) - 新文预告
-- [Markdown 导论](#/pages/test.md) - Markdown 支持测试
+## [📝 文章归档](#/posts/)
+- *Recent things may show here*
+
+## 📌 固定页面
+- [人事档案](#/pages/profile.md)
+  - *我是谁？*
+- [TODO](#/TODO.md)
+  - 脑洞预告
+- [Markdown 导论](#/pages/test.md)
+  - Markdown 支持测试
 
