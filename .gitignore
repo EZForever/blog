@@ -1,3 +1,6 @@
 # Ignore my feature test file
 /pages/lab.md
 
+# WIP
+/pages/profile*
+
