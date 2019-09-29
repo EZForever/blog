@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wolfram|Alpha Proxy</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    </head>
+    <body>
+        <div>
+            <form action="" method="get" target="_self">
+                <input type="text" name="appid" value="" placeholder="APPID" />
+                <input type="text" name="input" value="" placeholder="Input" />
+                <input type="text" name="podstate" value="" placeholder="State" />
+                <input type="submit" value="Submit" />
+            </form>
+            <hr />
+        </div>
+        <iframe id="frm" src="about:blank"></iframe>
+        <style>
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+iframe {
+    border: none;
+    flex-grow: 1;
+}
+
+/* Stupid AD on free3v */
+center {
+    display: none;
+}
+        </style>
+        <script>
+$(document).ready(function() {
+    window._onStateChange = function(state) {
+        $("[name=podstate]").val(state);
+        $("[type=submit]").click();
+    };
+
+    function isMobile() {
+        return /mobile|Android|webOS|iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+
+    function renderNative(text, style) {
+        const xmlHeader = "<?xml version='1.0' encoding='UTF-8'?>\n"
+        var xmlContent = text.replace(xmlHeader, xmlHeader + `<?xml-stylesheet type='text/xsl' href='${style}'?>\n`);
+        var blobContent = new Blob([xmlContent], {type: "application/xml"});
+        $("#frm").attr("src", URL.createObjectURL(blobContent));
+    };
+
+    /* The real reason above method cannot work on my phone is that,
+     * as of WebView 74 it does not support blob URLs. So a complete
+     * remake is done here.
+     */
+    function renderScript(obj, style) {
+        var objStyle;
+        $.ajax({
+            url: style,
+            async: false,
+            dataType: "xml",
+            success: function(ret) {objStyle = ret.children[0];}
+        });
+
+        var xmlProc = new XSLTProcessor;
+        xmlProc.importStylesheet(objStyle);
+
+        var objContent = xmlProc.transformToDocument(obj.children[0]);
+        var htmlContent = (new XMLSerializer).serializeToString(objContent);
+
+        window.frames[0].document.write(htmlContent);
+    };
+
+    function main() {
+        var queryParams = new URLSearchParams(window.location.search);
+        var objParams = {};
+        ["appid", "input", "podstate"].forEach((item) => {
+            objParams[item] = queryParams.get(item) || "";
+            $(`[name=${item}]`).val(objParams[item]);
+            objParams[item] = encodeURIComponent(objParams[item]);
+        });
+
+        if(objParams.input) {
+            $.ajax({
+                url: `https://cors-anywhere.herokuapp.com/http://api.wolframalpha.com/v2/query?appid=${objParams.appid}&input=${objParams.input}&podstate=${objParams.podstate}`,
+                headers: {
+                    "X-Requested-With": document.domain
+                },
+                dataType: isMobile() ? "xml" : "text",
+                success: function(ret) {
+                    var pwdArr = location.href.split("/");
+                    pwdArr.pop();
+                    (isMobile() ? renderScript : renderNative)(ret, pwdArr.join("/") + "/wolfram.xsl");
+                }
+            });
+        }
+    }
+
+    main();
+});
+        </script>
+    </body>
+</html>
