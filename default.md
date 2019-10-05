@@ -3,14 +3,14 @@
 
 ---
 
-## [📝 文章归档](#/posts/)
-- *Recent things may show here*
+## [📝 kt.gy Fork](/kt.gy/)
+- CTF编码瑞士军刀[kt.gy](https://kt.gy/)的中国大陆优化版
 
-## 📌 固定页面
-- [人事档案](#/pages/profile.md)
-  - *我是谁？*
-- [TODO](#/TODO.md)
-  - 脑洞预告
-- [Markdown 导论](#/pages/test.md)
-  - Markdown 支持测试
+## [📐 Wolfram|Alpha API Proxy](/blog/static/wolfram)
+- （相对）友好的 Wolfram|Alpha API 用户界面
+
+---
+
+## [📑 文章归档](#/posts/)
+- *Recent things may show here*
 
