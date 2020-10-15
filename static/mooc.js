@@ -58,3 +58,53 @@ var cancel_toggle = (token => () => (
 );
 toggle();
 
+console.log('%c\n' + new Array(80).join('='), 'color: gray;');
+console.warn(`%c
+						--- WARNING: R00T IN YOUR AREA ---                      
+`, 'color: gold; font-weight: bold');
+console.log(`%c
+o,                                                                            ,o
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                     ,;;;;;;;;;'                                
+                           '''''''  ckOOOOOOOOOd, ,lol:'                        
+                         ''''''''  'd0000000000o  lxxxx:                        
+                         ''''''''  :k000000000O: ,oxxxxc                        
+                          ''''''   'clllllllll:  ';::::'                        
+                         ',,;;;,    ''''''''''   ',;,,,                         
+                         cdxxxxo, ':ccccccccc:' ,oddddl,                        
+                         :dxxxxc  ,:ccccccccc;  :dddddc                         
+                         'lxxxd; ':ccccccccc:, 'lxdddo;                         
+                          ;oddl' '::::::::::;  ,ldddo:                          
+                            ''     ' ''''''     ','''                           
+                            ',' ';::::::::::'  :cc:,                            
+                                ;odoodoooodl' ;dddc'                            
+                                cooooodoooo:  cdl;                              
+                                ,cooooooooo;  :;                                
+                                  ':loooooc'                                    
+                                     ,;::;'                                     
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                    ''          ''            ''          ''                    
+                   ,;    ,,,, ':;;c,        ,:;:c' ;l:,    ;;                   
+                  ':'   ,l;,,';c;;c:        :c;;c; ,c;     ':'                  
+                  ':,   ,:'   'c:,:,        ,c;;:'  ::'    ,:'                  
+                   ';'          ','  ''''''  ',,     ,,   ';'                   
+                                     ',''''                                     
+                                                                                
+                                                                                
+,                                                                              ,
+O:                                                                            :O
+`, 'color: aqua');
+console.log(`%c
+					 --- R00T = R00T Owned Other Teams ---                      
+`, 'color: yellow; font-style: italic');
+
