@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>BTT2022</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <header>
+        <h3>"Together for ███████"</h3>
+        <p>
+            <em>2022 BTT Challenge by EZForever</em><br />
+            <em>Made for the r00team with much love</em>
+        </p>
+        <p>
+            百年往事。<br />
+            P.S. 你不需要电脑也能解题，但互联网和纸笔是必不可少的。
+        </p>
+        <p>
+            <strong>题目类型：</strong>Crypto + Misc<br />
+            <strong>Bubble Tea Token 格式：</strong>[A-Z]+<br />
+        </p>
+    </header>
+    <hr />
+    <main>
+        <p id="prologue">
+            "████████"同志：
+        </p>
+        <p>
+            遗憾地通知你，据可靠情报，你我曾经的战友"███████"同志背叛了自己的祖国和人民，于9月11日违抗组织下达的命令且失去联系。线人称最后一次目击位于████情报局门前；"███████"极有可能已经叛逃，成为我们的敌人。
+        </p>
+        <p>
+            昨日（13日）晚间约10时，在"███████"使用的频段上突然开始出现大功率无线电活动，不间断重复固定内容。电报员通过三角定位确认，发报点位于████情报局。经组织批准，现将电报内容抄送给全体行动人员。
+        </p>
+        <pre>...-- ---.. .---- ...-- ----.  ....- .---- ----. ...-- .----
+....- ....- ...-- ---.. ....-  ..--- ----. ---.. ..--- ...--
+.---- ....- ....- ...-- .----  .---- ....- ....- -.... .----
+..--- ..--- ...-- ...-- ----.  ...-- ..--- ----- ---.. ....-
+---.. ....- ----. ----. ..---  ----- ----. ...-- ...-- ----.</pre>
+        <p>
+            行动即刻中止，启动应急预案 D-5，所有行动人员返回安全地点并保持无线电静默，更换通信密码，等待进一步指示。与"███████"有关的所有任务即刻取消；任务相关人员立即返回总部汇报情况并更换身份。
+        </p>
+        <p id="epilogue">
+            ██████ █████████<br />
+            Ulitsa Malaya Lubyanka, 1/3, Moscow<br />
+            1959/09/14
+        </p>
+        <hr />
+        <p id="postscript">
+            <em>P.S. 组织对"███████"的叛逃事件相当重视，这封电报更换了密码，总部现在怀疑我们中间出了“小团体”。我的电台也被监听了，只能用这种方式传信给你。我去了他的住所，所有资料都被销毁，仅剩的两页文本附给你了；看下来，这电报好像是专门写给你的？  ————"████"</em>
+        </p>
+    </main>
+    <a href="pic.jpg">
+        <img alt="CH-01 1959/09/13 23:14:30" src="pic.jpg" />
+    </a>
+</body>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Courier New', '仿宋', monospace;
+        background-image: linear-gradient(45deg, #606060 50%, #666666 50%);
+        background-size: 2em 2em;
+    }
+
+    header {
+        width: 100%;
+        color: white;
+    }
+
+    hr {
+        width: 100%;
+        border: 1px solid darkgray;
+    }
+
+    main {
+        width: 42em;
+        margin: 2em 0;
+        padding: 4em;
+        box-shadow: 0 0 1em black, 0 0 4em bisque inset;
+        filter: url(#wavy);
+        background-color: #fffef0;
+        color: black;
+        text-shadow: 0 0 0.1em black;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main p {
+        margin-block: 0.5em;
+        text-indent: 2em;
+        word-break: break-all;
+    }
+
+    p#prologue, p#postscript {
+        text-indent: 0;
+    }
+
+    p#epilogue {
+        text-indent: 0;
+        text-align: right;
+    }
+
+    pre {
+        align-self: center;
+        max-width: calc(100% - 2em);
+        overflow: auto;
+        border: 1px dashed gray;
+        padding: 1em;
+        background-color: lightgray;
+    }
+
+    a {
+        width: 30em;
+        transform: rotate(5deg);
+    }
+
+    img {
+        max-width: 100%;
+        border: 1.2em solid #fffef0;
+        box-shadow: 0 0 1em black;
+    }
+
+    svg#defs {
+        display: none;
+    }
+
+    @media screen and (max-width: 50em) {
+        main {
+            width: 90%;
+            margin: 0.2em 0;
+            padding: 1em;
+        }
+
+        a {
+            width: 70%;
+        }
+
+        img {
+            border-width: 0.8em;
+        }
+    }
+</style>
+<svg id="defs">
+    <filter id="wavy">
+        <feTurbulence x="0" y="0" baseFrequency="0.003" numOctaves="1" seed="42" />
+        <feDisplacementMap in="SourceGraphic" scale="20" />
+    </filter>
+</svg>
+<script>
+    document.oncontextmenu = () => {
+        alert('本题不涉及Web安全技术，不需要从网页下手');
+        return false;
+    };
+
+    setInterval(eval(`
+() => {
+    // 本题不涉及Web安全技术，不需要从网页下手
+    debugger;
+}
+    `), 500);
+</script>
+</html>
