@@ -90,10 +90,7 @@ $(document).ready(function() {
 
         if(objParams.input) {
             $.ajax({
-                url: `https://cors-anywhere.herokuapp.com/http://api.wolframalpha.com/v2/query?appid=${objParams.appid}&input=${objParams.input}&podstate=${objParams.podstate}`,
-                headers: {
-                    "X-Requested-With": document.domain
-                },
+                url: `https://api.codetabs.com/v1/proxy/?quest=http://api.wolframalpha.com/v2/query?appid=${objParams.appid}&input=${objParams.input}&podstate=${objParams.podstate}`,
                 dataType: isMobile() ? "xml" : "text",
                 success: function(ret) {
                     var pwdArr = location.href.split("/");
