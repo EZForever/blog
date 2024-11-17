@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>RTCTF 24H2 - "The Ultimate Puzzler"</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <form id="input" >
+        Input your findings:
+        <input id="findings" type="text" />
+        <input type="submit" value="OK" />
+    </form>
+    <p id="result"></p>
+</body>
+<script>
+    // YOU SHOULD NOT BE LOOKING AT THIS
+    // This page has nothing to do with actually *finding* the flag
+    // Go find your clues in the game, then input them here to get the flag
+    async function get_digest(algorithm, data) {
+        let digest = await crypto.subtle.digest(algorithm, new TextEncoder().encode(data));
+        return [...new Uint8Array(digest)].map(x => ('00' + x.toString(16)).slice(-2)).join('');
+    }
+
+    document.getElementById('input').onsubmit = async (event) => {
+        event.preventDefault();
+        
+        var findings = document.getElementById('findings').value;
+        findings = [...findings.matchAll(/[\u4E00-\u9FA5]/g)].sort().join('');
+        if(findings.length != 24) {
+            document.getElementById('result').innerText = 'You havn\'t found all clues';
+            return;
+        }
+
+        var digest = await get_digest('SHA-256', 'RTCTF24H2\x00' + findings + '\x0091779111');
+        if(digest != '42b92b62ebce83d75d6b9b4e8ad68bc4d1c323a95cb22accaa6d88049e74f5cd') {
+            document.getElementById('result').innerText = 'Your clues are wrong';
+            return;
+        }
+
+        var flag = await get_digest('SHA-1', findings);
+        flag = 'r00t{' + flag.slice(-32) + '}';
+        document.getElementById('result').innerText = flag;
+    };
+
+    document.oncontextmenu = () => {
+        alert('本题不涉及Web安全技术，不需要从网页下手');
+        return false;
+    };
+
+    setInterval(eval(`
+() => {
+    // 本题不涉及Web安全技术，不需要从网页下手
+    debugger;
+}
+    `), 500);
+</script>
+</html>
